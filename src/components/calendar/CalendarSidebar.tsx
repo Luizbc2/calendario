@@ -1,15 +1,15 @@
 import { useCalendar } from '@/hooks/useCalendar';
 import { format, isBefore, isToday, addDays } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { CalendarDays, FileText, Briefcase, User, Gamepad2, Sun, Moon } from 'lucide-react';
+import { FaRegCalendarAlt, FaRegFileAlt, FaBriefcase, FaUser, FaGamepad, FaSun, FaMoon } from 'react-icons/fa';
 import { EventCategory, CalendarEvent } from '@/types/calendar';
 import { useTheme } from '@/hooks/useTheme';
 import { Link } from 'react-router-dom';
 
 const categoryIcons: Record<EventCategory, React.ReactNode> = {
-  work: <Briefcase className="h-3.5 w-3.5" />,
-  personal: <User className="h-3.5 w-3.5" />,
-  leisure: <Gamepad2 className="h-3.5 w-3.5" />,
+  work: <FaBriefcase className="h-3.5 w-3.5" />,
+  personal: <FaUser className="h-3.5 w-3.5" />,
+  leisure: <FaGamepad className="h-3.5 w-3.5" />,
 };
 
 const categoryColorVar: Record<EventCategory, string> = {
@@ -52,14 +52,14 @@ export function CalendarSidebar() {
           <span className="text-sm font-medium">João Silva</span>
         </Link>
         <button onClick={toggle} className="text-muted-foreground hover:text-foreground cal-transition p-1.5 rounded-lg hover:bg-secondary">
-          {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          {isDark ? <FaSun className="h-4 w-4" /> : <FaMoon className="h-4 w-4" />}
         </button>
       </div>
 
       {/* Upcoming */}
       <div className="p-4 flex-1 overflow-auto scrollbar-thin">
         <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3 flex items-center gap-1.5">
-          <CalendarDays className="h-3.5 w-3.5" />
+          <FaRegCalendarAlt className="h-3.5 w-3.5" />
           Próximos Compromissos
         </h3>
         {upcoming.length === 0 ? (
@@ -74,7 +74,7 @@ export function CalendarSidebar() {
 
         <div className="mt-6">
           <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3 flex items-center gap-1.5">
-            <FileText className="h-3.5 w-3.5" />
+            <FaRegFileAlt className="h-3.5 w-3.5" />
             Anotações Recentes
           </h3>
           {recentNotes.length === 0 ? (

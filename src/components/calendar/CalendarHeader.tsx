@@ -1,5 +1,5 @@
 import { useCalendar } from '@/hooks/useCalendar';
-import { ChevronLeft, ChevronRight, Calendar } from 'lucide-react';
+import { FaChevronLeft, FaChevronRight, FaRegCalendarAlt } from 'react-icons/fa';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { Button } from '@/components/ui/button';
@@ -23,7 +23,7 @@ export function CalendarHeader() {
   return (
     <div className="flex items-center justify-between px-6 py-4 border-b border-border bg-card">
       <div className="flex items-center gap-3">
-        <Calendar className="h-5 w-5 text-primary" />
+        <FaRegCalendarAlt className="h-5 w-5 text-primary" />
         <h1 className="text-xl font-semibold capitalize">{title}</h1>
       </div>
 
@@ -32,10 +32,10 @@ export function CalendarHeader() {
           Hoje
         </Button>
         <Button variant="ghost" size="icon" onClick={goPrev}>
-          <ChevronLeft className="h-4 w-4" />
+          <FaChevronLeft className="h-4 w-4" />
         </Button>
         <Button variant="ghost" size="icon" onClick={goNext}>
-          <ChevronRight className="h-4 w-4" />
+          <FaChevronRight className="h-4 w-4" />
         </Button>
         <div className="flex ml-2 bg-secondary rounded-lg p-0.5">
           {(['month', 'week', 'day'] as ViewMode[]).map((mode) => (

@@ -81,14 +81,14 @@ export function MonthView() {
                 {dayEvents.slice(0, 3).map((event) => (
                   <div
                     key={event.id}
-                    className={`flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-medium truncate ${categoryColors[event.category]} bg-opacity-15`}
+                    className={`flex items-center gap-1 px-1.5 py-0.5 rounded text-xs font-medium truncate ${categoryColors[event.category]} bg-opacity-15`}
                     style={{ backgroundColor: `hsl(var(--cal-event-${event.category}) / 0.12)`, color: `hsl(var(--cal-event-${event.category}))` }}
                   >
                     <span className="truncate">{event.startTime} {event.title}</span>
                   </div>
                 ))}
                 {dayEvents.length > 3 && (
-                  <span className="text-[10px] text-muted-foreground pl-1">
+                  <span className="text-xs text-muted-foreground pl-1">
                     +{dayEvents.length - 3} mais
                   </span>
                 )}

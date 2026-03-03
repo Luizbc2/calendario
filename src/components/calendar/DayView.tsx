@@ -47,7 +47,7 @@ export function DayView() {
                 {hourEvents.map((event) => (
                   <div
                     key={event.id}
-                    className="absolute inset-x-2 top-1 px-3 py-1.5 rounded-md text-xs font-medium"
+                    className="absolute inset-x-2 top-1 px-3 py-1.5 rounded-md text-sm font-medium"
                     style={{
                       backgroundColor: `hsl(${categoryBg[event.category]} / 0.12)`,
                       color: `hsl(${categoryBg[event.category]})`,
@@ -57,7 +57,7 @@ export function DayView() {
                     <span className="font-semibold">{event.title}</span>
                     <span className="ml-2 opacity-70">{event.startTime} - {event.endTime}</span>
                     {event.notes && (
-                      <p className="mt-0.5 text-[10px] opacity-60 truncate">{event.notes}</p>
+                      <p className="mt-0.5 text-xs opacity-60 truncate">{event.notes}</p>
                     )}
                   </div>
                 ))}

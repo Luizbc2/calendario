@@ -3,16 +3,16 @@ import { useCalendar } from '@/hooks/useCalendar';
 import { EventCategory } from '@/types/calendar';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { X, Briefcase, User, Gamepad2 } from 'lucide-react';
+import { FaTimes, FaBriefcase, FaUser, FaGamepad } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
 const categories: { value: EventCategory; label: string; icon: React.ReactNode }[] = [
-  { value: 'work', label: 'Trabalho', icon: <Briefcase className="h-4 w-4" /> },
-  { value: 'personal', label: 'Pessoal', icon: <User className="h-4 w-4" /> },
-  { value: 'leisure', label: 'Lazer', icon: <Gamepad2 className="h-4 w-4" /> },
+  { value: 'work', label: 'Trabalho', icon: <FaBriefcase className="h-4 w-4" /> },
+  { value: 'personal', label: 'Pessoal', icon: <FaUser className="h-4 w-4" /> },
+  { value: 'leisure', label: 'Lazer', icon: <FaGamepad className="h-4 w-4" /> },
 ];
 
 const categoryColorVar: Record<EventCategory, string> = {
@@ -59,7 +59,7 @@ export function EventModal() {
         <div className="flex items-center justify-between px-5 py-4 border-b border-border">
           <h2 className="font-semibold text-lg">Novo Evento</h2>
           <button onClick={closeModal} className="text-muted-foreground hover:text-foreground cal-transition">
-            <X className="h-5 w-5" />
+            <FaTimes className="h-5 w-5" />
           </button>
         </div>
 

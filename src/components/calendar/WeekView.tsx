@@ -72,7 +72,7 @@ export function WeekView() {
                   {hourEvents.map((event) => (
                     <div
                       key={event.id}
-                      className="absolute inset-x-0.5 top-0.5 px-1.5 py-0.5 rounded text-[10px] font-medium truncate"
+                      className="absolute inset-x-0.5 top-0.5 px-1.5 py-0.5 rounded text-xs font-medium truncate"
                       style={{
                         backgroundColor: `hsl(${categoryBg[event.category]} / 0.15)`,
                         color: `hsl(${categoryBg[event.category]})`,
