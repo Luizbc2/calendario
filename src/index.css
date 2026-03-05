@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
-@tailwind components;
+@tailwinzd components;
 @tailwind utilities;
 
 @layer base {
@@ -131,6 +131,37 @@
 
   .scrollbar-thin {
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--border)) transparent;
+    scrollbar-color: hsl(var(--primary) / 0.55) hsl(var(--secondary) / 0.35);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: hsl(var(--secondary) / 0.35);
+    border-left: 1px solid hsl(var(--border) / 0.35);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary) / 0.45);
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-clip: padding-box;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--primary) / 0.65);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-corner {
+    background: transparent;
   }
 }

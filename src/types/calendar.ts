@@ -1,4 +1,4 @@
-export type EventCategory = 'work' | 'personal' | 'leisure';
+export type EventCategory = 'work' | 'personal' | 'leisure' | 'other';
 
 export interface CalendarEvent {
   id: string;

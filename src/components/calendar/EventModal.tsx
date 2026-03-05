@@ -8,17 +8,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { FaRegCommentDots } from "react-icons/fa6";
 
 const categories: { value: EventCategory; label: string; icon: React.ReactNode }[] = [
   { value: 'work', label: 'Trabalho', icon: <FaBriefcase className="h-4 w-4" /> },
   { value: 'personal', label: 'Pessoal', icon: <FaUser className="h-4 w-4" /> },
   { value: 'leisure', label: 'Lazer', icon: <FaGamepad className="h-4 w-4" /> },
+  { value: 'other', label: 'Outro', icon: <FaRegCommentDots className="h-4 w-4" /> },
 ];
 
 const categoryColorVar: Record<EventCategory, string> = {
   work: 'var(--cal-event-work)',
   personal: 'var(--cal-event-personal)',
   leisure: 'var(--cal-event-leisure)',
+  other: 'var(--cal-event-other)',
 };
 
 export function EventModal() {
@@ -119,6 +122,7 @@ export function EventModal() {
               ))}
             </div>
           </div>
+              
 
           <div>
             <Label htmlFor="notes">Anotações</Label>

@@ -13,7 +13,7 @@ export function CalendarLayout() {
     <div className="flex h-screen w-full bg-background">
       <div className="flex-1 flex flex-col min-w-0">
         <CalendarHeader />
-        <div className="flex-1 overflow-auto">
+        <div className="flex-1 overflow-auto scrollbar-thin">
           {viewMode === 'month' && <MonthView />}
           {viewMode === 'week' && <WeekView />}
           {viewMode === 'day' && <DayView />}
