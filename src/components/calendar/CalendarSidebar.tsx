@@ -2,6 +2,7 @@ import { useCalendar } from '@/hooks/useCalendar';
 import { format, isBefore, isToday, addDays } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { FaRegCalendarAlt, FaRegFileAlt, FaBriefcase, FaUser, FaGamepad, FaSun, FaMoon } from 'react-icons/fa';
+import { FaRegCommentDots } from 'react-icons/fa6';
 import { EventCategory, CalendarEvent } from '@/types/calendar';
 import { useTheme } from '@/hooks/useTheme';
 import { Link } from 'react-router-dom';
@@ -10,12 +11,14 @@ const categoryIcons: Record<EventCategory, React.ReactNode> = {
   work: <FaBriefcase className="h-3.5 w-3.5" />,
   personal: <FaUser className="h-3.5 w-3.5" />,
   leisure: <FaGamepad className="h-3.5 w-3.5" />,
+  other: <FaRegCommentDots className="h-3.5 w-3.5" />,
 };
 
 const categoryColorVar: Record<EventCategory, string> = {
   work: 'var(--cal-event-work)',
   personal: 'var(--cal-event-personal)',
   leisure: 'var(--cal-event-leisure)',
+  other: 'var(--cal-event-other)',
 };
 
 export function CalendarSidebar() {

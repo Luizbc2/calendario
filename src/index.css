@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
-@tailwinzd components;
+@tailwind components;
 @tailwind utilities;
 
 @layer base {
@@ -52,6 +52,7 @@
     --cal-event-work: 217 91% 60%;
     --cal-event-personal: 142 71% 45%;
     --cal-event-leisure: 38 92% 50%;
+    --cal-event-other: 272 86% 58%;
     --cal-hover: 217 91% 97%;
     --cal-grid: 214 32% 94%;
   }
@@ -100,6 +101,7 @@
     --cal-event-work: 217 91% 65%;
     --cal-event-personal: 142 71% 50%;
     --cal-event-leisure: 38 92% 55%;
+    --cal-event-other: 272 86% 70%;
     --cal-hover: 217 33% 14%;
     --cal-grid: 217 33% 14%;
   }

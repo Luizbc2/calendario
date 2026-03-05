@@ -9,6 +9,7 @@ const categoryBg: Record<EventCategory, string> = {
   work: 'var(--cal-event-work)',
   personal: 'var(--cal-event-personal)',
   leisure: 'var(--cal-event-leisure)',
+  other: 'var(--cal-event-other)',
 };
 
 export function WeekView() {

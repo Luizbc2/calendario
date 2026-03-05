@@ -10,6 +10,7 @@ const categoryColors: Record<EventCategory, string> = {
   work: 'bg-cal-work',
   personal: 'bg-cal-personal',
   leisure: 'bg-cal-leisure',
+  other: 'bg-violet-500',
 };
 
 const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
